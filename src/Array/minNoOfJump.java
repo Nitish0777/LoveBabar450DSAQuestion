@@ -20,6 +20,7 @@ public class minNoOfJump {
                 return jump;
             }
             maxReach = Math.max(maxReach,i+arr[i]);
+            System.out.println("max"+maxReach);
             step--;
             if (step == 0) {
                 jump++;
