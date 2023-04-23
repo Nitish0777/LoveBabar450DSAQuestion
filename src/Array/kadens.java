@@ -13,10 +13,26 @@ public class kadens {
         }
         return max;
     }
-    public static void main(String[] args) {
+
+    public static long maxSubarraySumImp(int arr[], int n){
+        int maxSum = arr[0];
+        int sum = 0;
+        if (arr.length <= 1){
+            return sum;
+        }
+        for (int i = 0; i < n; i++){
+            sum+=arr[i];
+            maxSum = Math.max(maxSum,sum);
+            if (sum < 0){
+                sum = 0;
+            }
+        }
+        return maxSum;
+    }
+        public static void main(String[] args) {
         int N = 5;
         int Arr[] = {1,2,3,-2,5};
-        long ans = maxSubarraySum(Arr,N);
+        long ans = maxSubarraySumImp(Arr,N);
         System.out.println(ans);
     }
 }
