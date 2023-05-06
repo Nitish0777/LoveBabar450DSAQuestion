@@ -23,12 +23,12 @@ public class levelOrderTraversal {
         que.add(root);
         while (!que.isEmpty()){
             Node temp = que.poll();
-            System.out.print(temp.data+" ");
+//            System.out.print(temp.data+" ");
             ans.add(temp.data);
-            if (root.left != null){
+            if (temp.left != null){
                 que.add(temp.left);
             }
-            if (root.right != null){
+            if (temp.right != null){
                 que.add(temp.right);
             }
         }
@@ -40,8 +40,14 @@ public class levelOrderTraversal {
 //        System.out.println(root.data);
         root.left = new Node(2);
         root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(6);
+        root.right.right =new Node(5);
 //        System.out.println(root.data + " " + root.left.data+" "+ root.right.data);
         ArrayList<Integer> ans = levelOrder(root);
+        for (int i = 0; i < ans.size(); i++){
+            System.out.print(ans.get(i)+" ");
+        }
 
     }
 }
