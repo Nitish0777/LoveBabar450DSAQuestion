@@ -6,25 +6,7 @@ public class merge2SortedArr {
         // code here
         int start = 0;
         int start1 = 0;
-        for (int i = 0; i < 4; i++){
-            if (arr1[start] > arr2[start1]){
-                start++;
-            }else {
-                long temp = arr1[start];
-                arr1[start] = arr2[start1];
-                arr2[start1] = temp;
-                start++;
-//                start1++;
-            }
-        }
 
-        for (int i = 0; i < arr1.length; i++){
-            System.out.print(arr1[i]+" ");
-        }
-        System.out.println();
-        for (int i = 0; i < arr2.length; i++){
-            System.out.print(arr2[i]+" ");
-        }
 
     }
 
