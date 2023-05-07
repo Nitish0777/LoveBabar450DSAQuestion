@@ -11,7 +11,7 @@ public class preOrderTraversal {
         stack.push(root);
         while (!stack.isEmpty()){
             Node curr = stack.pop();
-            System.out.print(curr.data+ " ");
+            System.out.print(curr.data+" ");
             if (curr.right != null){
                 stack.push(curr.right);
             }
