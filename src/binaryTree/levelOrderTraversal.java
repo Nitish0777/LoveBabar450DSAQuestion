@@ -35,6 +35,12 @@ public class levelOrderTraversal {
         return ans;
     }
 
+    public static List<List<Integer>> levelOrderLeetcode(Node root) {
+        Queue<Integer> que = new LinkedList<>();
+        List<List<Integer>> list = new LinkedList<>();
+
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
 //        System.out.println(root.data);
@@ -44,7 +50,8 @@ public class levelOrderTraversal {
         root.left.right = new Node(6);
         root.right.right =new Node(5);
 //        System.out.println(root.data + " " + root.left.data+" "+ root.right.data);
-        ArrayList<Integer> ans = levelOrder(root);
+//        ArrayList<Integer> ans = levelOrder(root);
+        List<List<Integer>>  ans = levelOrderLeetcode(root);
         for (int i = 0; i < ans.size(); i++){
             System.out.print(ans.get(i)+" ");
         }
