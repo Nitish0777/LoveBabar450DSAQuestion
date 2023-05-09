@@ -5,24 +5,24 @@ import java.util.Stack;
 public class inorderTraversal {
 
     public static void inorderIterative(Node root){
-        if (root == null){
-            return;
-        }
-        Stack<Node> stack = new Stack<>();
-        Node curr = root;
-
-        while (!stack.isEmpty() || curr != null){
-            if (curr != null){
-                stack.push(curr);
-                curr = curr.left;
-            }
-            else {
-                curr = stack.pop();
-                System.out.print(curr.data+" ");
-                curr = curr.right;
-            }
-        }
+       if (root == null){
+           return;
+       }
+       Stack<Node> stack = new Stack<>();
+       Node curr = root;
+       while (!stack.isEmpty() || curr != null){
+           if (curr != null){
+               stack.push(curr);
+               curr = curr.left;
+           }else {
+               curr = stack.pop();
+               System.out.print(curr.data+" ");
+               curr = curr.right;
+           }
+       }
     }
+
+
 
     public static void inorderRecursive(Node root){
         if (root == null){
